@@ -7,6 +7,7 @@ This is a Flask application that provides an API for interacting with a Google B
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
+- [Populating the DB](#populating-the-db)
 - [Testing](#testing)
 - [Docker](#docker)
 
@@ -102,6 +103,14 @@ Add a new sentence.
     - **405**: Invalid input
     - **409**: A sentence already exists with this ID
     - **500**: Error inserting into BigQuery
+
+# Populating the DB
+It is possible to populate the database using the input file mentionned in the exercice, using the following steps
+```sh
+cd sentence_app
+python populate_db.py # optionnally use --lines option, to limit the number of documents to process
+```
+
 # Testing
 ## Running Unit Tests
 The application uses pytest for testing. To run the tests:
